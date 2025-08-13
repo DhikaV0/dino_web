@@ -42,7 +42,7 @@ export default function TriassicPage() {
           <span className="text-6xl mb-4">🦖</span>
           <h2 className="text-2xl font-bold text-red-700 mb-2">No Dinosaurs Found</h2>
           <p className="text-gray-700 mb-6">
-            Our paleontologists couldn't find any Triassic dinosaurs. Try again later or explore other eras.
+            Our paleontologists couldn&apos;t find any Triassic dinosaurs. Try again later or explore other eras.
           </p>
           <button 
             onClick={() => router.push('/')}
