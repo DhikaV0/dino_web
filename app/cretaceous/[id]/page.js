@@ -143,15 +143,15 @@ export default function DinoDetail() {
                 <div className="space-y-3">
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Size</span>
-                    <span className="font-medium">{dino.size}</span>
+                    <span className="text-gray-600 font-medium">{dino.size}</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Weight</span>
-                    <span className="font-medium">{dino.weight}</span>
+                    <span className="text-gray-600 font-medium">{dino.weight}</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Diet Type</span>
-                    <span className="font-medium capitalize">{dino.diet}</span>
+                    <span className="text-gray-600 font-medium capitalize">{dino.diet}</span>
                   </div>
                 </div>
               </section>
@@ -163,15 +163,15 @@ export default function DinoDetail() {
                 <div className="space-y-3">
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Location Found</span>
-                    <span className="font-medium text-right">{dino.location}</span>
+                    <span className="text-gray-600 font-medium text-right">{dino.location}</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Time Period</span>
-                    <span className="font-medium">Cretaceous</span>
+                    <span className="text-gray-600 font-medium">Cretaceous</span>
                   </div>
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Year Discovered</span>
-                    <span className="font-medium">
+                    <span className="text-gray-600 font-medium">
                       {dino.discovery_year || "Unknown"}
                     </span>
                   </div>
