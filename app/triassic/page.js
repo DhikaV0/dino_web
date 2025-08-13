@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function TriassicPage() {
   const [dinos, setDinos] = useState([]);
@@ -78,7 +79,7 @@ export default function TriassicPage() {
             </svg>
             Back to Home
           </button>
-          
+
           {/* Header tetap center */}
           <div className="text-center">
             <div className="inline-flex items-center justify-center bg-emerald-100 text-emerald-800 rounded-full px-6 py-2 mb-4">
@@ -122,9 +123,11 @@ export default function TriassicPage() {
             >
               {/* Image with fallback */}
               <div className="w-full h-56 overflow-hidden relative">
-                <img
+                <Image
                   src={dino.image || "/placeholder-dino.jpg"}
                   alt={dino.name}
+                  width={400}
+                  height={224}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     e.target.onerror = null;

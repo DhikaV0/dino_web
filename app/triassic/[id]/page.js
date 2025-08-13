@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function DinoDetail() {
@@ -108,9 +109,11 @@ export default function DinoDetail() {
         <div className="bg-white rounded-xl shadow-xl overflow-hidden">
           {/* Hero image */}
           <div className="relative h-80 sm:h-96 w-full bg-gray-100">
-            <img
+            <Image
               src={dino.image || "/placeholder-dino.jpg"}
               alt={dino.name}
+              width={800}
+              height={600}
               className="w-full h-full object-contain"
               onError={(e) => {
                 e.target.onerror = null;

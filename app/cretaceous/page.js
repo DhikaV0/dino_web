@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function CretaceousPage() {
   const [dinos, setDinos] = useState([]);
@@ -122,9 +123,11 @@ export default function CretaceousPage() {
             >
               {/* Image with fallback */}
               <div className="w-full h-56 overflow-hidden relative">
-                <img
+                <Image
                   src={dino.image || "/placeholder-dino.jpg"}
                   alt={dino.name}
+                  width={400}
+                  height={224}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   onError={(e) => {
                     e.target.onerror = null;
