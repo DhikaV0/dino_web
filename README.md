@@ -41,4 +41,4 @@ This project uses modern web technologies to provide an engaging and informative
 
 ## 📍 Source
   Media and source used in this project are from my API that you can check here:
-  [Github](https://github.com/DhikaV0/dino-API)
+  [Dino API](https://github.com/DhikaV0/dino-API)
