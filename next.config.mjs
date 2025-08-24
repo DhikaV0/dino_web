@@ -7,6 +7,7 @@ const nextConfig = {
         'www.activewild.com', 
         'images.fineartamerica.com',
         'www.thoughtco.com',
+        'alchetron.com',
     ],
     },
 };

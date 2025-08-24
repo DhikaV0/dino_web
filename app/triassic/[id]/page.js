@@ -171,9 +171,7 @@ export default function DinoDetail() {
                   </div>
                   <div className="flex justify-between border-b border-gray-100 pb-2">
                     <span className="text-gray-600">Year Discovered</span>
-                    <span className="text-gray-600 font-medium">
-                      {dino.discovery_year || "Unknown"}
-                    </span>
+                    <span className="text-gray-600 font-medium">{dino.first_found}</span>
                   </div>
                 </div>
               </section>

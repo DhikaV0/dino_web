@@ -56,14 +56,13 @@ export default function CretaceousPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-stone-100 to-amber-50 py-12 px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-gradient-to-b from-stone-100 to-amber-50 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header with era info */}
         <div className="relative mb-12">
-          {/* Tombol Back di pojok kiri atas */}
           <button
             onClick={() => router.push("/")}
-            className="absolute left-0 top-0 flex items-center text-emerald-700 hover:text-emerald-900 font-medium"
+            className="left-0 top-0 flex items-center py-6 text-emerald-700 hover:text-emerald-900 font-medium"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +79,6 @@ export default function CretaceousPage() {
             Back to Home
           </button>
 
-          {/* Header tetap center */}
           <div className="text-center">
             <div className="inline-flex items-center justify-center bg-emerald-100 text-emerald-800 rounded-full px-6 py-2 mb-4">
               <span className="text-xl mr-2">🌍</span>
