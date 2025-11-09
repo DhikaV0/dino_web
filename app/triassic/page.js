@@ -11,7 +11,7 @@ export default function TriassicPage() {
   const router = useRouter();
 
   useEffect(() => {
-    fetch("https://dhikav0.github.io/dino-API/triassic/triassic_dino.json")
+    fetch("https://dhikav0.github.io/dino-API/api/triassic.json")
       .then((res) => res.json())
       .then((data) => {
         setDinos(data.triassic_dinosaurs || []);

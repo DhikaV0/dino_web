@@ -11,7 +11,7 @@ export default function CretaceousPage() {
   const router = useRouter();
 
   useEffect(() => {
-    fetch("https://dhikav0.github.io/dino-API/cretaceous/cretaceous_dino.json")
+    fetch("https://dhikav0.github.io/dino-API/api/cretaceous.json")
       .then((res) => res.json())
       .then((data) => {
         setDinos(data.cretaceous_dinosaurs || []);

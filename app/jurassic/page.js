@@ -11,7 +11,7 @@ export default function JurassicPage() {
   const router = useRouter();
 
   useEffect(() => {
-    fetch("https://dhikav0.github.io/dino-API/jurassic/jurassic_dino.json")
+    fetch("https://dhikav0.github.io/dino-API/api/jurassic.json")
       .then((res) => res.json())
       .then((data) => {
         setDinos(data.jurassic_dinosaurs || []);

@@ -13,7 +13,7 @@ export default function DinoDetail() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("https://dhikav0.github.io/dino-API/triassic/triassic_dino.json")
+    fetch("https://dhikav0.github.io/dino-API/api/triassic.json")
       .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch dinosaur data");
         return res.json();
