@@ -4,12 +4,12 @@ A beautifully designed web application to explore dinosaurs from different geolo
 This project uses modern web technologies to provide an engaging and informative experience for dinosaur enthusiasts.
 
 ## ✨ Features
-- 🌍 Browse dinosaurs by geological era
-- 📜 Detailed dinosaur descriptions, size, weight, diet, and location
-- 🖼 High-quality dinosaur images with fallback support
-- 🔍 Planned search and filter functionality
-- 📱 Fully responsive design
-- 🎨 Modern UI with smooth animations
+- Browse dinosaurs by geological era
+- Detailed dinosaur descriptions, size, weight, diet, and location
+- High-quality dinosaur images with fallback support
+- Planned search and filter functionality
+- Fully responsive design
+- Modern UI with smooth animations
 
 ---
 
