@@ -25,11 +25,11 @@ export default function JurassicPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-stone-100 to-amber-50">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-200">
         <div className="text-center">
-          <div className="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-emerald-700 mb-4"></div>
-          <h2 className="text-2xl font-bold text-emerald-800 mb-2">Unearthing Dinosaurs...</h2>
-          <p className="text-gray-600">Digging up prehistoric data from the Jurassic period</p>
+          <div className="inline-block animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-teal-500 mb-4"></div>
+          <h2 className="text-xl font-medium text-white mb-2">Unearthing Dinosaurs...</h2>
+          <p className="text-slate-400 text-sm">Digging up prehistoric data from the Jurassic period</p>
         </div>
       </div>
     );
@@ -37,16 +37,16 @@ export default function JurassicPage() {
 
   if (dinos.length === 0) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-stone-100 to-amber-50 p-6">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-200 p-6">
         <div className="text-center max-w-md">
-          <span className="text-6xl mb-4">🦖</span>
-          <h2 className="text-2xl font-bold text-red-700 mb-2">No Dinosaurs Found</h2>
-          <p className="text-gray-700 mb-6">
+          <span className="text-6xl mb-4 block grayscale opacity-50">🦖</span>
+          <h2 className="text-xl font-bold text-white mb-2">No Dinosaurs Found</h2>
+          <p className="text-slate-400 mb-6 text-sm">
             Our paleontologists couldn&apos;t find any Jurassic dinosaurs. Try again later or explore other eras.
           </p>
           <button 
             onClick={() => router.push('/')}
-            className="px-6 py-2 bg-emerald-600 text-white rounded-lg hover:bg-emerald-500 transition"
+            className="px-6 py-2 bg-slate-800 border border-slate-700 text-white rounded-lg hover:bg-slate-700 hover:border-teal-500 transition-all text-sm font-medium"
           >
             Back to Home
           </button>
@@ -56,111 +56,97 @@ export default function JurassicPage() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-stone-100 to-amber-50 sm:px-6 lg:px-8">
+    <main className="min-h-screen bg-slate-950 text-slate-200 sm:px-6 lg:px-8 pb-12">
       <div className="max-w-7xl mx-auto">
         {/* Header with era info */}
         <div className="relative mb-12">
           <button
             onClick={() => router.push("/")}
-            className="left-0 top-0 flex items-center py-6 text-emerald-700 hover:text-emerald-900 font-medium"
+            className="left-0 top-0 flex items-center py-6 text-slate-400 hover:text-teal-400 transition-colors font-medium text-sm"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5 mr-1"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fillRule="evenodd"
-                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
-                clipRule="evenodd"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clipRule="evenodd" />
             </svg>
-            Back to Home
+            Back
           </button>
 
           <div className="text-center">
-            <div className="inline-flex items-center justify-center bg-emerald-100 text-emerald-800 rounded-full px-6 py-2 mb-4">
-              <span className="text-xl mr-2">🌍</span>
-              <span className="font-medium">201-145 Million Years Ago</span>
+            <div className="inline-flex items-center justify-center bg-teal-950/50 border border-teal-900/50 text-teal-400 rounded-full px-4 py-1.5 mb-4 text-sm font-medium">
+              <span className="mr-2">🌍</span>
+              201.3-145.0 Million Years Ago
             </div>
-            <h1 className="text-4xl md:text-5xl font-extrabold text-emerald-900 mb-3">
+            <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-3 tracking-tight">
               Jurassic Dinosaurs
             </h1>
-            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-              Discover the ancient creatures that roamed Earth during the dawn of the dinosaurs
+            <p className="text-slate-400 max-w-2xl mx-auto text-sm md:text-base">
+              Discover the ancient creatures that roamed Earth during the dawn of the dinosaurs.
             </p>
           </div>
         </div>
 
-        {/* Search and filter (placeholder for future functionality) */}
-        <div className="mb-8 max-w-md mx-auto">
+        {/* Search and filter (placeholder) */}
+        <div className="mb-10 max-w-md mx-auto">
           <div className="relative">
             <input
               type="text"
               placeholder="Search Jurassic dinosaurs..."
-              className="w-full px-5 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+              className="w-full px-5 py-3 bg-slate-900 border border-slate-800 rounded-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-teal-500 focus:border-teal-500 transition-all text-sm"
               disabled
             />
-            <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500">
+            <button className="absolute right-3 top-1/2 transform -translate-y-1/2 text-slate-500">
               🔍
             </button>
           </div>
-          <p className="text-xs text-gray-500 mt-2 text-center">
-            Search functionality coming soon!
-          </p>
         </div>
 
         {/* Dinosaur grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {dinos.map((dino) => (
             <Link
               key={dino.id}
               href={`/jurassic/${dino.id}`}
-              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+              className="group bg-slate-900 rounded-xl border border-slate-800 overflow-hidden hover:border-teal-500/50 transition-all duration-300 hover:-translate-y-1 block"
             >
-              {/* Image with fallback */}
-              <div className="w-full h-56 overflow-hidden relative">
+              <div className="w-full h-48 overflow-hidden relative bg-slate-800">
                 <Image
                   src={dino.image || "/placeholder-dino.jpg"}
                   alt={dino.name}
                   width={400}
                   height={224}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.src = "/placeholder-dino.jpg";
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent"></div>
               </div>
 
-              {/* Content */}
               <div className="p-5">
                 <div className="flex justify-between items-start mb-2">
-                  <h2 className="text-xl font-bold text-gray-900 group-hover:text-emerald-700 transition-colors">
+                  <h2 className="text-lg font-bold text-white group-hover:text-teal-400 transition-colors">
                     {dino.name}
                   </h2>
-                  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-emerald-100 text-emerald-800">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-semibold bg-slate-800 border border-slate-700 text-teal-400 uppercase tracking-wider">
                     {dino.diet}
                   </span>
                 </div>
 
-                <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                <p className="text-slate-400 text-sm mb-4 line-clamp-2 leading-relaxed">
                   {dino.description}
                 </p>
 
-                <div className="grid grid-cols-2 gap-2 text-sm">
-                  <div className="flex items-center text-gray-700">
-                    <span className="mr-1">📏</span>
+                <div className="grid grid-cols-2 gap-3 text-xs border-t border-slate-800 pt-3">
+                  <div className="flex items-center text-slate-300">
+                    <span className="mr-1.5 opacity-50">📏</span>
                     {dino.size}
                   </div>
-                  <div className="flex items-center text-gray-700">
-                    <span className="mr-1">⚖️</span>
+                  <div className="flex items-center text-slate-300">
+                    <span className="mr-1.5 opacity-50">⚖️</span>
                     {dino.weight}
                   </div>
-                  <div className="flex items-center text-gray-700 col-span-2">
-                    <span className="mr-1">📍</span>
+                  <div className="flex items-center text-slate-300 col-span-2">
+                    <span className="mr-1.5 opacity-50">📍</span>
                     <span className="truncate">{dino.location}</span>
                   </div>
                 </div>
@@ -170,18 +156,16 @@ export default function JurassicPage() {
         </div>
 
         {/* Era information footer */}
-        <div className="mt-16 bg-emerald-50 rounded-xl p-6 border border-emerald-100">
-          <h3 className="text-xl font-bold text-emerald-900 mb-3">About the Jurassic Period</h3>
-          <p className="text-gray-700 mb-4">
-            Jurassic Period, second of three periods of the Mesozoic Era. 
-            Extending from 201.3 million to 145 million years ago, 
-            it immediately followed the Triassic Period and was succeeded by the Cretaceous Period.
+        <div className="mt-16 bg-slate-900/50 rounded-xl p-6 border border-slate-800 text-center md:text-left">
+          <h3 className="text-lg font-bold text-white mb-2">About the Jurassic Period</h3>
+          <p className="text-slate-400 text-sm mb-4 leading-relaxed max-w-4xl">
+            The Jurassic is a geological period that lasted from about 201.3 to 145.0 million years ago. It is the second period of the Mesozoic Era, as well as the longest. At around 56.3 million years, it is the eighth and longest geological period of the entire Phanerozoic.
           </p>
           <button 
             onClick={() => window.open("https://en.wikipedia.org/wiki/Jurassic", "_blank")}
-            className="text-emerald-700 hover:text-emerald-900 font-medium flex items-center"
+            className="inline-flex items-center text-teal-400 hover:text-teal-300 text-sm font-medium transition-colors"
           >
-            Learn more about the Jurassic
+            Learn more on Wikipedia
             <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
             </svg>
